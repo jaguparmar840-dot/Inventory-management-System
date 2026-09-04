@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Inventory Management System</h1>
+        <p>Manage your products and stock easily</p>
+    </header>
+
+    <main>
+
+        <!-- Dashboard -->
+        <section class="dashboard">
+            <div class="card">
+                <h3>Total Products</h3>
+                <p id="totalProducts">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Stock</h3>
+                <p id="totalStock">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Low Stock</h3>
+                <p id="lowStock">0</p>
+            </div>
+        </section>
+
+        <!-- Add Product -->
+        <section class="product-form">
+            <h2>Add Product</h2>
+
+            <input
+                type="text"
+                id="productName"
+                placeholder="Product Name"
+            >
+
+            <input
+                type="number"
+                id="productQuantity"
+                placeholder="Quantity"
+            >
+
+            <input
+                type="number"
+                id="productPrice"
+                placeholder="Price"
+            >
+
+            <button onclick="addProduct()">Add Product</button>
+        </section>
+
+        <!-- Product List -->
+        <section class="products">
+            <h2>Product List</h2>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search product..."
+                onkeyup="searchProducts()"
+            >
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="productTable">
+                    <!-- Products will appear here -->
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
